@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Serializers"
-date:       2020-10-13 04:00:14 +0000
+date:       2020-10-13 00:00:14 -0400
 permalink:  serializers
 ---
 
@@ -22,7 +22,6 @@ We had to explicitly tell Rails what data to return whereas ActiveModel Serializ
 
 ## Installation
 
-(Link to Github) Click here for more details
 
  In order for us to implement this, we will first have to install the gem in our gem file and bundle install to complete the installation. 
 
@@ -49,6 +48,7 @@ Let’s assume the attribute for a teacher are name, degree, and university id. 
    ` render json: @teacher.to_json(only: [:name, :degree, :university_id],`
 	 
            ` include: [university: { only: [:name, :state]}])`
+					 
  ` end`
 	
 	
@@ -124,10 +124,12 @@ This will result our json object to be rendering the teachers’ and universitie
 `  university: {`
 	
    ` id: 1,`
+	 
 		
-    `name: “Nassau Community College”,`
+    ` name: “Nassau Community College”, `
 		
-    `state: “New York”`
+		
+    ` state: “New York” `
 		
 `  }`
 	
@@ -142,7 +144,9 @@ And our code within our controllers will end up to be cleaned up like this:
 
    ` @teacher = Teacher.find(params[:id])`
 		
+		
     `render json: @teacher`
+		
 		
  ` end`
 	
