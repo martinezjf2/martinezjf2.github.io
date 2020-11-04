@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "How to create a Search "
-date:       2020-11-04 19:15:20 +0000
+title:      "How to create a Search in React "
+date:       2020-11-04 14:15:21 -0500
 permalink:  how_to_create_a_search
 ---
 
